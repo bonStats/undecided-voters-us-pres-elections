@@ -19,7 +19,7 @@
 
 #### Directory ####
 
-  setwd("~/Dropbox/Research/Papers/JRSS_election/code/undecided-voters-us-pres-elections/")
+  setwd("~/Dropbox/Research/Code/undecided-voters-us-pres-elections/")
 
 ####
 
@@ -31,11 +31,9 @@
   library(plyr)
   library(dplyr)
   
+  # devtools::install_version("rv", version="2.3.2", repos="http://cran.r-project.org")
   library(rv)
   library(gtools)
-  
-  library(ggplot2)
-  library(scales)
 
 ####
 
@@ -52,7 +50,7 @@
   setnsims(length(rstan::extract(models$SRGG$stan_fit, "lp__")[[1]]))
   getnsims()
   
-  if(any(diff(sapply(models, function(l){length(extract(l$stan_fit, "lp__")[[1]])})) != 0)){
+  if(any(diff(sapply(models, function(l){length(rstan::extract(l$stan_fit, "lp__")[[1]])})) != 0)){
     warning("Simulations from stan objects loaded are not equal in length")
   }
 
@@ -137,7 +135,7 @@
     
   })
   
-  # remove stan fit (and rv as already saved), and unwanted rvs
+  # remove unwanted rvs calculations
   # and save summary rvs
   remove_items <- c("postrv","stan_fit","i","stan_data","SRS_i","sig_i","p_i","p_i_e")
   models$SRGG[remove_items] <- NULL
@@ -151,7 +149,7 @@
   
   for(mdn in c("prop","even")){
     
-    models[[mn]] <- within(models[[mn]],{
+    models[[mdn]] <- within(models[[mdn]],{
       
       postrv <- as.rv(stan_fit)
       syid <- stan_data$state_year_id
@@ -341,8 +339,14 @@
     
   }
   
-  saveRDS(models$SRGG, file = "fitted-models/SRGG-summary-rvs.rds")
-  saveRDS(models$prop, file = "fitted-models/prop-summary-rvs.rds")
-  saveRDS(models$even, file = "fitted-models/even-summary-rvs.rds")
+  
+  # remove unwanted rvs calculations
+  # and save summary rvs
+  remove_items <- c(remove_items,"p_i_e_0uh","p_i_0uh","p_i_e_0h","p_i_0h","p_i_e_0u","p_i_0u","p_i_h","p_i_u")
+  models$prop[remove_items] <- NULL
+  models$even[remove_items] <- NULL
+  
+  saveRDS(models$prop, file = "fitted-models/extended-SRGG-prop-summary-rvs.rds")
+  saveRDS(models$even, file = "fitted-models/extended-SRGG-even-summary-rvs.rds")
 
 ####
