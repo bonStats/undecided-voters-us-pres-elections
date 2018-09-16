@@ -4,7 +4,7 @@ Cite as: JJ Bon, T Ballard, B Baffour (2018). "Polling bias and undecided voter 
 
  - Corresponding Author: Joshua J Bon
  - Email: joshuajbon@gmail.com
- - Web: joshuabon.com
+ - Web: https://joshuabon.com
  - Git: https://github.com/bonStats/undecided-voters-us-pres-elections/
 
 ## Directory description
