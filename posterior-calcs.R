@@ -61,19 +61,6 @@
   ilogit.rv <- function(x) rvmapply(FUN = inv.logit, x)
   logit.rv <- function(x) rvmapply(FUN = logit, x)
   
-  rv_sm <- function(rr, cnames = NULL){
-    xx <- rbind(
-      rvmean(rr) %>% round(digits = 1),
-      rvsd(rr) %>% round(digits = 2)
-    )
-    
-    dimnames(xx) <- list(c("mean", "sd"), 1:ncol(xx))
-    
-    if(!is.null(cnames)) colnames(xx) <- cnames
-    
-    return(xx)
-  }
-  
 ####
 
 #### Original model - Bias summaries ####
@@ -253,8 +240,6 @@
       b_r_0uh <- rv(N_races)
       b_r_e_0uh <- rv(N_races)
       
-      und_level <- rv(N_races)
-      
       sd_r <- rv(N_races)
       
       SRS_r <- rv(N_races)
@@ -273,6 +258,7 @@
         
         sd_r[i]  <-  mean(sig_i[i == stan_data$state_year_id])
         SRS_r[i] <-  mean(SRS_i[i == stan_data$state_year_id])
+        
       }
       
       # overall summaries (mean abs)
@@ -335,7 +321,16 @@
       y_id_ord <- vote_data %>% select(year,year_id) %>% 
         unique() %>% arrange(year_id) %>% select(year) %>% collect() %>% .[[1]]
       
+      # Save more from postrv
+      alpha_und <- postrv$alpha_und
+      gamm <- postrv$gamm
+      kappa <- postrv$kappa
+      phi_und <- postrv$phi_und
+      
+      
     })
+    
+
     
   }
   
