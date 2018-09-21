@@ -57,8 +57,8 @@ This data contains the election *polls* for the 2004, 2008, 2012, and 2016 US pr
 
 ## R code description
 
-- `state-polls-original-model.R`: Fit original SSRG model
-- `state-polls-extended-model-proportionate.R`: Fit extended SSRG model with baseline *proportionate* split of undecided voters
-- `state-polls-extended-model-even.R`: Fit extended SSRG model with baseline *even* split of undecided voters
+- `state-polls-original-model.R`: Fit original SRGG model
+- `state-polls-extended-model-proportionate.R`: Fit extended SRGG model with baseline *proportionate* split of undecided voters
+- `state-polls-extended-model-even.R`: Fit extended SRGG model with baseline *even* split of undecided voters
 - `posterior-calcs.R`: Calculate additional posterior quantities from the model
 - `paper-outputs.R`: Reproduce all plots and tables for the paper
