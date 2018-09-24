@@ -50,8 +50,8 @@
  
  rv_sm <- function(rr, cnames = NULL){
    xx <- rbind(
-     rvmean(rr) %>% round(digits = 1),
-     rvsd(rr) %>% round(digits = 2)
+     round(rvmean(rr), digits = 1),
+     round(rvsd(rr), digits = 2)
    )
    
    dimnames(xx) <- list(c("mean", "sd"), 1:ncol(xx))
