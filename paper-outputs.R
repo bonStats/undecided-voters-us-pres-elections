@@ -278,7 +278,7 @@
   
 #### Table 6 ####
   
-  # Table 2: overall 
+  # Table 6: overall 
   rv_sm(ext_even$mabs_b_r * 100)
   rv_sm(ext_even$mabs_b_r_e * 100)
   rv_sm(ext_even$mabs_b_r_u * 100)
@@ -287,7 +287,7 @@
   rv_sm(mean(ext_even$alpha_und) * 100)
   
   
-  # Table 2: yearly
+  # Table 6: yearly
   rv_sm(ext_even$yearly_mabs_b_r * 100, cnames = ext_even$y_id_ord)
   rv_sm(ext_even$yearly_mabs_b_r_e * 100, cnames = ext_even$y_id_ord) 
   rv_sm(ext_even$yearly_mabs_b_r_u * 100, cnames = ext_even$y_id_ord)
