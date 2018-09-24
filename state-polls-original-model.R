@@ -60,7 +60,7 @@
   )
   
   
-  #saveRDS(list(stan_fit = resStan, stan_data = stan_dat_list, vote_data = vote_data, poll_data = poll_data), file = "fitted-models/SRGG-fit.rds")
+  #saveRDS(list(stan_fit = resStan, stan_data = stan_dat_list, vote_data = vote_data, poll_data = poll_data), file = "fitted_models/SRGG-fit.rds")
   
 ####
   

@@ -38,11 +38,11 @@
 
 #### Load RVs from models ####
 
- SRGG <- readRDS("fitted-models/SRGG-summary-rvs.rds")
+ SRGG <- readRDS("fitted_models/SRGG-summary-rvs.rds")
  
- ext_prop <- readRDS("fitted-models/extended-SRGG-prop-summary-rvs.rds")
+ ext_prop <- readRDS("fitted_models/extended-SRGG-prop-summary-rvs.rds")
  
- ext_even <- readRDS("fitted-models/extended-SRGG-even-summary-rvs.rds")
+ ext_even <- readRDS("fitted_models/extended-SRGG-even-summary-rvs.rds")
  
 ####
  

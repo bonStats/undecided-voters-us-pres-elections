@@ -42,9 +42,9 @@
   # list of models (as environments)
   models <- list()
   
-  models$prop <- readRDS("fitted-models/extended-SRGG-prop-fit.rds")
-  models$even <- readRDS("fitted-models/extended-SRGG-even-fit.rds")
-  models$SRGG <- readRDS("fitted-models/SRGG-fit.rds")
+  models$prop <- readRDS("fitted_models/extended-SRGG-prop-fit.rds")
+  models$even <- readRDS("fitted_models/extended-SRGG-even-fit.rds")
+  models$SRGG <- readRDS("fitted_models/SRGG-fit.rds")
   
   # set number of simulations for RV package
   setnsims(length(rstan::extract(models$SRGG$stan_fit, "lp__")[[1]]))
@@ -127,7 +127,7 @@
   remove_items <- c("postrv","stan_fit","i","stan_data","SRS_i","sig_i","p_i","p_i_e")
   models$SRGG[remove_items] <- NULL
 
-  saveRDS(models$SRGG, file = "fitted-models/SRGG-summary-rvs.rds")
+  saveRDS(models$SRGG, file = "fitted_models/SRGG-summary-rvs.rds")
   
 ####
   
@@ -341,7 +341,7 @@
   models$prop[remove_items] <- NULL
   models$even[remove_items] <- NULL
   
-  saveRDS(models$prop, file = "fitted-models/extended-SRGG-prop-summary-rvs.rds")
-  saveRDS(models$even, file = "fitted-models/extended-SRGG-even-summary-rvs.rds")
+  saveRDS(models$prop, file = "fitted_models/extended-SRGG-prop-summary-rvs.rds")
+  saveRDS(models$even, file = "fitted_models/extended-SRGG-even-summary-rvs.rds")
 
 ####
