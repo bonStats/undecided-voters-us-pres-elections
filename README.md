@@ -6,10 +6,11 @@ Cite as: JJ Bon, T Ballard, B Baffour (2018). "Polling bias and undecided voter 
  - Email: joshuajbon@gmail.com
  - Web: https://joshuabon.com
  - Github: https://github.com/bonStats/undecided-voters-us-pres-elections/
+ - arXiv: https://arxiv.org/abs/1703.09430
 
 ## Directory description
 
-- Top: contains all `R` code for running models and reproducing plots and tables in the paper
+- Top: contains all `.R` code for running models and reproducing plots and tables in the paper
 - `data/`: Contain the state-level polling and voting data
 - `stan_models/`: contains `.stan` code that define (and estimate by HMC) the models
 - `fitted_models/`: Folder for fitted `.stan` models and summary outputs from those models 
@@ -52,7 +53,7 @@ This data contains the election *polls* for the 2004, 2008, 2012, and 2016 US pr
 - `result_margin6`: Category for margin of voting *result*. Strong Dem. win (margin > 6%), Strong Rep. win (margin > 6%), or close margin (margin < 6%)
 - `rmargin_year`: `result_margin6` concatenated with `year`
 - `rmargin_year_id`: Unique integer ids for `rmargin_year`
-- `pollster_grp`: Further clean and grouped polling agencies or institutes
+- `pollster_grp`: Further cleaned and grouped polling agencies or institutes
 - `pollster_id`:  Unique integer ids for `pollster_grp`
 
 ## R code description
