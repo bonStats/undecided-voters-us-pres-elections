@@ -1,6 +1,6 @@
 # Data and code to accompany paper "Polling bias and undecided voter allocations: US Presidential elections, 2004 - 2016"
 
-Cite as: JJ Bon, T Ballard, B Baffour (2018). "Polling bias and undecided voter allocations: US Presidential elections, 2004 - 2016". Journal of the Royal Statistical Society (Series A). Forthcoming.
+Cite as: JJ Bon, T Ballard, B Baffour (2018). "Polling bias and undecided voter allocations: US Presidential elections, 2004 - 2016". Journal of the Royal Statistical Society (Series A). Early view: http://dx.doi.org/10.1111/rssa.12414.
 
  - Corresponding Author: Joshua J Bon
  - Email: joshuajbon@gmail.com
@@ -13,7 +13,8 @@ Cite as: JJ Bon, T Ballard, B Baffour (2018). "Polling bias and undecided voter 
 - Top: contains all `.R` code for running models and reproducing plots and tables in the paper
 - `data/`: Contain the state-level polling and voting data
 - `stan_models/`: contains `.stan` code that define (and estimate by HMC) the models
-- `fitted_models/`: Folder for fitted `.stan` models and summary outputs from those models 
+- `fitted_models/`: Folder for fitted `.stan` models and summary outputs from those models
+- `eda/`: Contains example(s) of exploratory data analysis, including Figure 1 in the paper.
 
 The `fitted_models/` folder may be empty due to large size of files. Run the models and posterior calculations to populate.
 
