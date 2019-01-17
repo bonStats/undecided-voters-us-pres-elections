@@ -1,6 +1,6 @@
 # Data and code to accompany paper "Polling bias and undecided voter allocations: US Presidential elections, 2004 - 2016"
 
-Cite as: Bon, J. J., Ballard, T. and Baffour, B. (2019), Polling bias and undecided voter allocations: US presidential elections, 2004–2016. Journal of the Royal Statistical Society, Series A (Statistics in Society). [doi:10.1111/rssa.12414](http://dx.doi.org/10.1111/rssa.12414).
+Cite as: Bon, J. J., Ballard, T. and Baffour, B. (2019), Polling bias and undecided voter allocations: US presidential elections, 2004–2016. Journal of the Royal Statistical Society, Series A (Statistics in Society), 182(2): 467-493. doi:[10.1111/rssa.12414](http://dx.doi.org/10.1111/rssa.12414).
 
 [Link to paper on journal website](http://dx.doi.org/10.1111/rssa.12414)
 
