@@ -7,7 +7,7 @@ Cite as: Bon, J. J., Ballard, T. and Baffour, B. (2019), Polling bias and undeci
 [Link to paper on arXiv](https://arxiv.org/abs/1703.09430)
 
  - Corresponding Author: Joshua J Bon
- - Web: https://joshuabon.com
+ - Web: http://joshuabon.com
  - Github: https://github.com/bonStats/undecided-voters-us-pres-elections/
 
 ## Directory description
