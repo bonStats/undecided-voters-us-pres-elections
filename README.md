@@ -21,7 +21,7 @@ Cite as: Bon, J. J., Ballard, T. and Baffour, B. (2019), Polling bias and undeci
 The `fitted_models/` folder may be empty due to large size of files. Run the models and posterior calculations to populate.
 
 ## Data description
-Two data sets are in the `data/` directory.
+Two data sets are in the `data/` directory. Please cite the above paper if using the dataset(s).
 
 ### Election results: `us-pres-state-voting-2004-2016.*` 
 This data contains the election *results* for the 2004, 2008, 2012, and 2016 US presidential election by state. It is in both `.csv` and `.rds` (`tibble`) format. It has columns:
